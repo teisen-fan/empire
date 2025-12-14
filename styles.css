@@ -1,0 +1,305 @@
+/* Global Styles */
+:root {
+    --primary-color: #0056b3;
+    /* Royal Blue */
+    --secondary-color: #d4af37;
+    /* Gold */
+    --accent-color: #ff69b4;
+    /* Soft Pink */
+    --background-color: #f0f8ff;
+    /* Alice Blue */
+    --sidebar-bg: #ffffff;
+    --text-color: #333;
+    --white: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --font-main: 'Helvetica Neue', Arial, sans-serif;
+    --font-header: 'Georgia', serif;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: linear-gradient(to bottom, #e6f7ff, #fff0f5);
+    min-height: 100vh;
+}
+
+/* Iframe Styles */
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: transparent;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    border-bottom: 3px solid var(--secondary-color);
+    /* padding: 1rem 0; Removed padding, iframe handles content spacing or container height */
+    height: 80px;
+    /* Fixed height for iframe */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.header-inner {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    /* Ensure inner content centers vertically if used directly */
+}
+
+/* Note: The iframe inside header will take 100% height/width. */
+
+.logo {
+    font-family: var(--font-header);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-shadow: 1px 1px 0 var(--secondary-color);
+}
+
+/* Layout Wrapper */
+.page-wrapper {
+    display: flex;
+    width: 95%;
+    max-width: 1400px;
+    margin: 20px auto;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: var(--sidebar-bg);
+    /* padding: 20px; Moved padding to sidebar.html */
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px;
+    /* Adjust based on header height */
+    max-height: calc(100vh - 120px);
+    height: calc(100vh - 120px);
+    /* Fill height so iframe fills it */
+    overflow: hidden;
+    /* Iframe handles scroll */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .page-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+        max-height: 400px;
+        /* Limit height on mobile */
+        height: auto;
+    }
+}
+
+.sidebar-section {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-title {
+    font-family: var(--font-header);
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    font-size: 0.95rem;
+}
+
+.sidebar a:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+/* Main Content Column */
+.main-content-column {
+    flex-grow: 1;
+    width: 0;
+    /* Prevents overflow in flex container */
+}
+
+/* Hero Section (Scoped to main content if customized, or kept global) */
+.hero {
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color);
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: var(--font-header);
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+/* Content Styles */
+.section-title {
+    color: var(--primary-color);
+    font-family: var(--font-header);
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 15px;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--secondary-color);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.content-page {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.content-page h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.content-page h3 {
+    color: var(--accent-color);
+    margin-top: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 10px;
+}
+
+.content-page ul {
+    padding-left: 20px;
+}
+
+.content-page li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .page-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+        max-height: none;
+    }
+}

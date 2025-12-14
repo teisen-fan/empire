@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <base target="_parent">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* Padding will be inside the .sidebar element in body */
+            background-color: transparent;
+        }
+
+        /* We need the sidebar styling here, but without fixed positioning constraints since it's filling the iframe */
+        .sidebar-content {
+            /* This mimics .sidebar style but meant for inside iframe */
+            background: var(--sidebar-bg);
+            /* padding: 20px; Moved to body or container */
+            /* We rely on styles.css classes but might need adjustment */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+       The parent page has <aside class="sidebar">. That container provides the white background, border, etc.
+       So this body should be transparent?
+       Wait, if parent has .sidebar styling, the iframe background is on top of it.
+       If iframe is transparent, we see parent background.
+       But .sidebar has padding: 20px. The iframe is inside the padding? No, content is inside padding.
+       So iframe width is reduced by padding.
+       If I want scrollbar inside iframe, the iframe should take full height.
+       Let's assume parent .sidebar removes padding and we put padding here.
+       Correction: Existing .sidebar has padding. If I put iframe inside, iframe is smaller.
+       If simple replacement:
+       Parent: <aside class="sidebar" style="padding: 0; overflow: hidden;"> <iframe ...> </aside>
+       Child: <div style="padding: 20px;"> ... content ... </div>
+       This way scrollbar is on iframe.
+    -->
+    <div style="padding: 20px;">
+        <div class="sidebar-section">
+            <div class="sidebar-title">メインメニュー</div>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-title">システム</div>
+            <ul>
+                <li><a href="synthesis.html">合成</a></li>
+                <li><a href="evolution.html">進化</a></li>
+                <li><a href="awakening.html">覚醒</a></li>
+                <li><a href="war.html">戦争</a></li>
+                <li><a href="battle.html">バトル</a></li>
+                <li><a href="deck.html">デッキ</a></li>
+                <li><a href="items.html">アイテム</a></li>
+                <li><a href="rare_medals.html">レアメダル</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-title">イベント攻略</div>
+            <ul>
+                <li><a href="march.html">マーチオブエンパイア</a></li>
+                <li><a href="chariot.html">チャリオット</a></li>
+                <li><a href="military_exercise.html">軍事演習</a></li>
+                <li><a href="suppression.html">討伐戦</a></li>
+                <li><a href="decisive_battle.html">決戦</a></li>
+                <li><a href="boot_camp.html">ブートキャンプ</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-title">データベース</div>
+            <ul>
+                <li><a href="database.html">データベースリンク</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-title">関連リンク</div>
+            <ul>
+                <li><a href="https://teikoku.game-ocean.jp/teaser/info/" target="_blank">公式サイト</a></li>
+                <li><a href="https://x.com/SakuraTeikoku" target="_blank">公式X</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                // Get parent filename
+                const parentUrl = window.parent.location.href;
+                const parentFilename = parentUrl.substring(parentUrl.lastIndexOf('/') + 1) || 'index.html';
+
+                const links = document.querySelectorAll('a');
+                links.forEach(link => {
+                    // Check if link href matches parent filename
+                    // link.href is absolute, we need relative or filename
+                    const linkFilename = link.getAttribute('href'); // e.g. "index.html"
+
+                    if (linkFilename === parentFilename) {
+                        link.style.backgroundColor = '#f0f8ff'; // var(--background-color)
+                        link.style.color = '#0056b3'; // var(--primary-color)
+                        // link.style.fontWeight = 'bold';
+                    }
+                });
+            } catch (e) {
+                console.log('Cannot access parent location (cross-origin or file protocol restriction):', e);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戦争 - 帝国戦記 攻略サイト</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Local styles for tables in this page */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f8ff;
+            color: var(--primary-color);
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <iframe src="header.html" title="Header"></iframe>
+    </header>
+
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <iframe src="sidebar.html" title="Sidebar"></iframe>
+        </aside>
+
+        <main class="main-content-column">
+            <div class="content-page">
+                <h2>戦争</h2>
+                <p>「戦争」は、<strong>短期間（2〜3日、計4〜6ターン）</strong>で行われるボードゲーム形式のイベントです。</p>
+
+                <h3>1. 目的と勝敗</h3>
+                <ul>
+                    <li><strong>目的:</strong> 部隊を動かしてマップ上の<strong>砦を占拠</strong>すること。</li>
+                    <li><strong>勝敗:</strong> 戦争終了時の<strong>砦保有数</strong>または<strong>滅亡順</strong>で順位が決定し、国家報酬や個人賞が与えられます。
+                    </li>
+                    <li><strong>滅亡:</strong> 自国の砦が全て無くなると「滅亡」となり、その回の戦争から退場しますが、ゲーム内の国家が滅亡する訳ではありません。</li>
+                </ul>
+
+                <h3>2. 部隊の種類と役割</h3>
+                <p>部隊は「正規軍」と「私設軍」の2種類があり、異なる役割と動かし方が設定されています。</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>部隊</th>
+                            <th>特徴</th>
+                            <th>強さの決定要素</th>
+                            <th>移動権限</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>正規軍</strong></td>
+                            <td><strong>保有砦の数</strong>だけ存在できる。強さは不変。</td>
+                            <td>数（保有砦数）</td>
+                            <td>皇帝または参謀のみ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>私設軍</strong></td>
+                            <td>各プレイヤーが1部隊保有。<strong>デッキ強さ</strong>が反映される。</td>
+                            <td>デッキの強さ</td>
+                            <td>各プレイヤー自身</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul>
+                    <li><strong>重要な点:</strong>
+                        デッキの強さが弱い私設軍でも、正規軍がいない状況や引き分けになった状況など、<strong>砦を占拠できる機会が豊富</strong>に用意されており、短期決戦においてその貢献が重要となります。
+                    </li>
+                    <li><strong>戦闘原則:</strong> 正規軍は正規軍と、私設軍は私設軍と戦うのが基本。私設軍は正規軍との勝負では問答無用で負けます。</li>
+                </ul>
+
+                <h3>3. 砦の獲得</h3>
+                <p>砦の獲得はターン終了時に以下の優先順位で行われます。</p>
+                <ol>
+                    <li><strong>正規軍の占拠:</strong> その国の正規軍がいれば獲得。</li>
+                    <li><strong>私設軍の占拠/勝利:</strong> 正規軍が不在で、その国の私設軍だけがいる、または私設軍同士のバトル（プレーヤーバトル）で勝利すれば獲得。</li>
+                    <li><strong>防衛:</strong> 自国砦で正規軍不在・私設軍バトル引き分けならそのまま維持。</li>
+                </ol>
+
+                <h3>4. 戦闘の種類と特徴</h3>
+                <ul>
+                    <li><strong>正規軍戦:</strong> 正規軍同士が衝突。正規軍の<strong>数の勝負</strong>。私設軍も一定数いれば正規軍に換算して参加可能。</li>
+                    <li><strong>局地戦/私設軍のみの戦闘:</strong> 正規軍戦が引き分け、または正規軍がいない場所で、私設軍同士が衝突。<strong>プレーヤーバトル</strong>に発展。
+                    </li>
+                    <li><strong>プレーヤーバトル:</strong> デッキの強さが反映されたHP削り合いの戦闘。HPが0になっても次ターンに砦が残っていれば<strong>完全復活</strong>。
+                    </li>
+                    <li><strong>昼の局地戦なし（奇数ターン）:</strong>
+                        プレーヤーバトルが開催されず、私設軍同士の衝突は<strong>必ず引き分け</strong>になる。これにより、強いプレイヤーが集まっても砦が取られにくくなり、<strong>弱小国の防衛や中立砦確保のチャンス</strong>が生まれる。
+                    </li>
+                </ul>
+
+                <h3>5. 部隊の行動と戦略</h3>
+                <ul>
+                    <li>各ターン、締め切り時刻まで<strong>部隊の指示は何度でも上書き変更可能</strong>。</li>
+                    <li>正規軍は<strong>砦の数</strong>しか存在できないため、空き地（●）や基地（★）を正規軍が利用するのはリスクを伴う。</li>
+                    <li>私設軍は正規軍の動きを読み、<strong>正規軍が不在になる場所</strong>や、<strong>正規軍の移動が間に合わない中立砦</strong>を狙うのが効果的な戦略となります。
+                    </li>
+                </ul>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="header-inner">
+            <p>&copy; 2025 帝国戦記 攻略サイト</p>
+        </div>
+    </footer>
+</body>
+
+</html>

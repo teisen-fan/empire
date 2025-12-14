@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デッキ - 帝国戦記 攻略サイト</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <iframe src="header.html" title="Header"></iframe>
+    </header>
+
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <iframe src="sidebar.html" title="Sidebar"></iframe>
+        </aside>
+
+        <main class="main-content-column">
+            <div class="content-page">
+                <h2>デッキ作成ガイド</h2>
+
+                <h3>1. デッキの基本ルール</h3>
+                <ul>
+                    <li><strong>編成</strong>: 戦争の局地戦やユーザーバトルでは、所持カードから<strong>5枚1組</strong>のデッキを使用して戦います。</li>
+                    <li><strong>制限</strong>: デッキの<strong>合計コストは、ユーザーの最大デッキコストを超えない</strong>ように構成する必要があります。</li>
+                </ul>
+
+                <h3>2. デッキ作成のコツ</h3>
+                <ul>
+                    <li><strong>コンボ</strong>: 攻撃型/防御型に応じたコンボ（例: 2枚コンボ+3枚コンボなど）を組み合わせることで、バトルを有利にする効果が得られます。</li>
+                    <li><strong>配置とスキル</strong>: <strong>左に配置されたカードほどスキルが発動しやすく</strong>なります。スキルの効果範囲（属性など）も考慮して編成しましょう。
+                    </li>
+                    <li><strong>ステータス強化</strong>: デッキカードに<strong>装備、幸運、祝福</strong>を装着するとステータスが上昇します。
+                        <ul>
+                            <li><strong>初期推奨装備</strong>: 攻撃デッキはトライデント、防御デッキはアキレウスの盾。それ以上は高価なので余裕ができてから揃えましょう。</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>3. エクストラデッキ</h3>
+                <ul>
+                    <li><strong>参加条件</strong>:
+                        デッキを使用してもコストが余っている場合、その余剰コストの分だけ、<strong>デッキ外の所持カードから強い順に自動的にバトルに参加</strong>します。</li>
+                    <li><strong>スキル</strong>: エクストラデッキの<strong>スキルは発動しません</strong>。</li>
+                    <li><strong>発揮ステータス</strong>: エクストラデッキのステータスには補正がかかります。
+                        <ul>
+                            <li>カードがレベルMAXの場合: <strong>10%</strong>のATK・DEFが発揮されます。</li>
+                            <li>それ以外の場合: <strong>1%</strong>のATK・DEFが発揮されます。</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>4. 自動作成デッキ</h3>
+                <ul>
+                    <li><strong>機能</strong>: 自分でデッキを作成しなくても、バトル時に<strong>最大コスト内で可能な限り強くなるように自動で編成</strong>されます。</li>
+                    <li><strong>推奨</strong>: より柔軟な編成を望む場合は、手動でのデッキ作成を推奨します。</li>
+                </ul>
+
+                <h3>5. デッキエラーの発生条件と自動対応</h3>
+                <p>以下の理由で設定したデッキが使用できない場合、バトルでは<strong>自動作成デッキが使用されます</strong>。</p>
+                <ul>
+                    <li><strong>最大コスト超過</strong>：最大デッキコストを超えてデッキを組んでいる場合。</li>
+                    <li><strong>幸運カードの制限</strong>：<strong>同名の幸運カードがデッキに2枚以上</strong>存在する場合。
+                        <ul>
+                            <li>※自動作成デッキおよびエクストラデッキは、同名カードが1枚のみになるように組まれます。</li>
+                        </ul>
+                    </li>
+                    <li><strong>祝福カードの制限</strong>：<strong>同名の祝福カードがデッキに2枚以上</strong>存在する場合。
+                        <ul>
+                            <li>※自動作成デッキおよびエクストラデッキは、同名カードが1枚のみになるように組まれます。</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="header-inner">
+            <p>&copy; 2025 帝国戦記 攻略サイト</p>
+        </div>
+    </footer>
+</body>
+
+</html>

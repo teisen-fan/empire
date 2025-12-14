@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブートキャンプ - 帝国戦記 攻略サイト</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <iframe src="header.html" title="Header"></iframe>
+    </header>
+
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <iframe src="sidebar.html" title="Sidebar"></iframe>
+        </aside>
+
+        <main class="main-content-column">
+            <div class="content-page">
+                <h2>ブートキャンプ</h2>
+                <p>このイベントは、<strong>ポーカーのように手札の「コンボ」のみで勝敗を決める特殊な戦闘</strong>です。</p>
+
+                <h3>1. イベント戦闘の基本</h3>
+                <ul>
+                    <li><strong>形式:</strong> 手札交換1回のみの即決バトル。(特効効果により手札交換2回の場合あり)</li>
+                    <li><strong>デッキ:</strong> イベント専用の<strong>「イベント用デッキ」</strong>（15枚）を使用。デッキ内容はイベント戦闘中以外はいつでも変更可能。</li>
+                    <li><strong>勝敗判定:</strong>
+                        イベント用デッキからランダムに引いた<strong>5枚のカードで成立した「コンボ」のみ</strong>で判定されます。ATK/DEF、スキル、進化度、装備などは一切関係ありません。
+                    </li>
+                    <li><strong>手札交換:</strong>
+                        バトル開始時に引いた5枚の手札から、<strong>任意の枚数を捨てて引き直す</strong>ことができます（通常1回限り。特効効果で2回交換）。</li>
+                    <li><strong>対戦相手:</strong> NPCキャラクター。</li>
+                </ul>
+
+                <h3>2. 重要な要素：「攻力」と「全力攻撃」</h3>
+                <ul>
+                    <li><strong>攻力消費:</strong> イベント戦闘には「攻力」を消費します。</li>
+                    <li><strong>全力攻撃:</strong>
+                        <ul>
+                            <li>消費攻力: <strong>3</strong>（通常は1）。</li>
+                            <li>効果: <strong>勝敗得点＋100</strong>、獲得イベントスコアが<strong>5倍</strong>になります。</li>
+                            <li>選択タイミング: 手札交換を終え、手が確定した<strong>後</strong>に、攻力1消費か3消費（全力攻撃）かを選択できます。</li>
+                        </ul>
+                    </li>
+                    <li><strong>攻力回復と離脱:</strong>
+                        いつでもイベント画面から離脱して攻力回復を待つことができます。ただし、イベント戦闘が保留状態になるため、<strong>イベントデッキの編集やカードの出し入れは強制敗北につながる</strong>可能性があります。最高得点の手になった時を狙って全力攻撃を仕掛けるのが効果的です。
+                    </li>
+                </ul>
+
+                <h3>3. イベントデッキ構築のヒント</h3>
+                <ul>
+                    <li><strong>推奨戦略:</strong>
+                        5枚のランダム抽出で必ずコンボが成立するように、デッキを<strong>単一属性のカード</strong>で統一して「属性統一コンボ」を常時成立させるのが安全策となります。</li>
+                    <li><strong>コンボ確認方法:</strong>
+                        <ol>
+                            <li><strong>フレンドのコンボ図鑑</strong>を閲覧できます（R以下の低級コンボは最初の方にあります）。</li>
+                            <li><strong>ブートキャンプのデッキ機能</strong>で、イベント用デッキに入れたカードで<strong>成立可能なコンボの一覧</strong>を確認できます。見つけられなかったコンボを発見するチャンスでもあります。
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <p class="note"
+                    style="margin-top: 2rem; background-color: #e8f4fd; padding: 1rem; border-left: 5px solid var(--primary-color);">
+                    <strong>要するに</strong><br>
+                    デッキを単一属性で固めて常時「属性統一コンボ」を成立させておいて、良い手札が引けたら「全力攻撃」（攻力3消費）でイベントスコアを大量に稼ぐことが安定した攻略方法です。
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="header-inner">
+            <p>&copy; 2025 帝国戦記 攻略サイト</p>
+        </div>
+    </footer>
+</body>
+
+</html>

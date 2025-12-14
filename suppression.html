@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>討伐戦 - 帝国戦記 攻略サイト</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Table styles for this page */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0 30px 0;
+            font-size: 0.95rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f8ff;
+            color: var(--primary-color);
+            font-weight: bold;
+            width: 30%;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            color: #856404;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <iframe src="header.html" title="Header"></iframe>
+    </header>
+
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <iframe src="sidebar.html" title="Sidebar"></iframe>
+        </aside>
+
+        <main class="main-content-column">
+            <div class="content-page">
+                <h2>討伐戦</h2>
+                <p>複数国家が競争して強大なNPC国家と戦うイベントです。常設戦と同じ戦争画面を使用しますが、内容は大きく異なります。</p>
+
+                <h3>1. 概要と基本ルール</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>形式</th>
+                            <td>複数国家が競争して強大なNPC国家と戦う。常設戦と同じ戦争画面を使用するが、内容は大きく異なる。</td>
+                        </tr>
+                        <tr>
+                            <th>攻撃と反撃</th>
+                            <td>NPCに攻撃しHPが少しでも残ったら<strong>反撃</strong>が来る。<strong>1撃で倒せれば反撃なし</strong>（但し、NPCのBPがゼロの場合は反撃されない）。
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>勝敗条件</th>
+                            <td>各ターンでのバトル制限時間内に<strong>国家単位で討伐数ノルマをクリア</strong>すれば勝利。ノルマ未達ならNPC軍の勝利。勝利時、成果ポイントが最も多い国が砦を獲得。（撃破数ではないことに注意）
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>国家報酬</th>
+                            <td>6ターン終了後の砦の数（★★は2、★★★は3とカウント）で順位と国家報酬が決定。獲得砦の絶対数を稼ぐ必要あり。</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>2. 常設戦との主な差異と移動</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>正規軍</th>
+                            <td><strong>正規軍は無い</strong>。</td>
+                        </tr>
+                        <tr>
+                            <th>先行参加</th>
+                            <td>定時前に参加可能。ただし、<strong>NPC砦への移動の場合のみ</strong>。先行参加後はターン終了まで行動登録ができなくなる。ただし、戻るボタンからマップ画面へ遷移して偵察することは可能。
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>3. NPC私設軍の仕様</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>ランクと成果ポイント</th>
+                            <td>NPC私設軍には★ランクがある。与ダメージに所定倍率をかけたものが成果ポイントとなる。ランクが高いと与ダメージは小さくなり、反撃も強くなる。</td>
+                        </tr>
+                        <tr>
+                            <th>NPC湧き条件</th>
+                            <td>各ターンでNPC私設軍が湧くのは、<strong>NPC砦か、そこに隣接している砦のみ</strong>。NPC戦をしないと成果ポイントを稼げず、個人ポイント報酬や国家ランキングに影響する場合がある。
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>4. 討伐戦スキル</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>初期値とリセット</th>
+                            <td>討伐戦スキルポイントが200配られる。イベントごとにスキルレベルもスキルポイントも<strong>ゼロクリアされる</strong>ので、入手分は使い切るべき。</td>
+                        </tr>
+                        <tr>
+                            <th>スキルポイントの入手</th>
+                            <td>NPC私設軍との戦闘や偵察でも討伐戦スキルポイントが入る。</td>
+                        </tr>
+                        <tr>
+                            <th>注意点</th>
+                            <td>一旦取得した討伐戦スキルは、<strong>レベルを下げたりOFFにしたりできない</strong>ので要注意です。</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>5. 討伐戦スキルアップの戦術と注意点</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>偵察（ターン前偵察）</th>
+                            <td>偵察しNPCを発見すると討伐戦スキルポイントが少量入る。回復薬を投入しつつ偵察を繰り返してスキルポイントを稼ぎ、重要なスキルを先に上げることが可能。課金による特効効果がある場合は、上限まで取りやすく回復薬を投入する必要がない場合もある。
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>討伐戦スキルポイント取得上限</th>
+                            <td>1ターンで取得できる討伐戦スキルポイントには上限がある。NPC私設軍との戦闘とターン前偵察で得られるスキルポイントの合算で上限まで取得できる。</td>
+                        </tr>
+                        <tr>
+                            <th>同時戦闘の注意</th>
+                            <td>討伐戦スキルポイントは、NPCを倒したプレイヤーに多くの討伐戦スキルポイントが入る。同時に同じNPCへ攻撃すると攻撃力の高いプレイヤーがラストアタックとなりやすく、攻撃力の低いプレイヤーは反撃をもらった上に得られるスキルポイントが低いという状況になりかねない。オーバーキル分も成果ポイントになるため、1撃撃破プレイヤーにメリットが大きい。
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>他国プレイヤーとの競争</th>
+                            <td>他国と砦を競っている（その回の成果ポイントが高かった国が砦を取る）場合は、他国プレイヤーが1撃で倒せるが自分が倒せない敵には攻撃しない方が賢明。</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>6. クラス分けと国家報酬</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>後半戦（マスタークラス）</th>
+                            <td>前半戦の成果ポイント国家内合計が<strong>10万以上</strong>だとマスタークラスに移行。砦の保有数による国家報酬が3倍になる代わりに、<strong>他国の砦を占領できる</strong>ようになる。
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>他国砦の占領（マスタークラス）</th>
+                            <td>一度取った砦でも、NPCが湧いてバトルになった状態で成果ポイントの合計が最高だった国家が砦を占領する。「<strong>NPC発生による局地戦が起こる</strong>」ことが条件。
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>国家報酬の条件</th>
+                            <td>敵と戦って<strong>成果ポイントを300以上</strong>取っていないプレイヤーは国家報酬はもらえません。</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>7. 特殊ルールと最終ターン</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>現在地を他の自軍砦へ変更</th>
+                            <td>ターン行動とは別に自軍砦間で移動可能。<strong>他国砦にいる時に使用すると、その砦には戻れなくなる</strong>事に注意。</td>
+                        </tr>
+                        <tr>
+                            <th>後半戦ラスボス</th>
+                            <td>中央砦に出現する。与ダメージ→個人ポイントの倍率（例:
+                                34倍）は高いが、反撃被ダメージやHPが他の★7より非常に高く危険。ただし、中央砦を占領できる国家に所属している場合は、ミッション報酬がもらえる可能性があるので危険を承知で最低一撃入れるべきでもある。
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>中央砦（最終ターン）</th>
+                            <td>最終ターンに中央砦からの一方通行が解除される。中央砦から1歩の所に自軍砦があれば、「現在地を他の自軍砦へ変更」機能で入れる。自軍砦がない場合、最終ターンの行動登録前に1歩の所にいる人しか入れないため、5ターンの行動登録時に6ターンのことも考慮すべき。
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    ※開催回ごとに報酬の内容や条件が少しずつ違っているので、<strong>都度確認願います</strong>。
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="header-inner">
+            <p>&copy; 2025 帝国戦記 攻略サイト</p>
+        </div>
+    </footer>
+</body>
+
+</html>

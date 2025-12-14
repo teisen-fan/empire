@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レアメダル - 帝国戦記 攻略サイト</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Local styles for tables in this page */
+        table {
+
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f8ff;
+            color: var(--primary-color);
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Tip box style */
+        .tip-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+
+        .tip-box h4 {
+            margin-top: 0;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <iframe src="header.html" title="Header"></iframe>
+    </header>
+
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <iframe src="sidebar.html" title="Sidebar"></iframe>
+        </aside>
+
+        <main class="main-content-column">
+            <div class="content-page">
+                <h2>レアメダルについて</h2>
+                <p>レアメダルは、貴重なアイテムやカードと交換できる特別なアイテムです。交換できる景品には、1ヶ月あたりの交換上限が設定されています。</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="rare_medals_chart.png" alt="レアメダルの入手と交換の流れ"
+                        style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                </div>
+
+                <h3>獲得方法</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>入手ルート</th>
+                            <th>詳細</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>カード交換</strong></td>
+                            <td>不要になったレアカードをメダルに交換できます。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>戦争報酬</strong></td>
+                            <td>戦争で勲章を獲得した際の報酬として入手できます。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>曜日クエスト</strong></td>
+                            <td>特定の曜日クエストの報酬として入手できます。</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>カード交換レート</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>カードの種類</th>
+                            <th>獲得メダル数 (1枚あたり)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Rカード</strong></td>
+                            <td>1枚</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SRカード</strong></td>
+                            <td>3枚</td>
+                        </tr>
+                        <tr>
+                            <td><strong>URカード</strong></td>
+                            <td>7枚</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box">
+                    <h4>💡 交換のヒント: より多くのメダルを獲得するには</h4>
+                    <p><strong>カードは、可能な限り進化させてから交換した方が、獲得メダル数が多くなります。</strong></p>
+                    <p><strong>例:</strong></p>
+                    <ul>
+                        <li><strong>Rカード2枚</strong>を直接交換すると <strong>1枚</strong> × 2 = <strong>2枚</strong> のメダル。</li>
+                        <li>Rカード2枚を<strong>SRカード1枚</strong>に進化させてから交換すると <strong>3枚</strong> のメダル。</li>
+                        <li><strong>SRカード2枚</strong>を直接交換すると <strong>3枚</strong> × 2 = <strong>6枚</strong> のメダル。</li>
+                        <li>SRカード2枚を<strong>URカード1枚</strong>に進化させてから交換すると <strong>7枚</strong> のメダル。</li>
+                    </ul>
+                </div>
+
+                <h3>🛒 レアメダル交換所 景品一覧 (月間上限あり)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>景品名</th>
+                            <th>説明</th>
+                            <th>数量</th>
+                            <th>必要メダル数</th>
+                            <th>交換回数上限</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>レアガチャチケット</strong></td>
+                            <td>レアチケットガチャを引くために必要</td>
+                            <td>400枚</td>
+                            <td>3枚</td>
+                            <td>200回</td>
+                        </tr>
+                        <tr>
+                            <td><strong>自分専用回復薬</strong></td>
+                            <td>クエストに必要な体力を全回復</td>
+                            <td>1個</td>
+                            <td>1枚</td>
+                            <td>70回</td>
+                        </tr>
+                        <tr>
+                            <td><strong>自分専用攻力薬</strong></td>
+                            <td>バトルに必要な攻力を全回復</td>
+                            <td>1個</td>
+                            <td>1枚</td>
+                            <td>70回</td>
+                        </tr>
+                        <tr>
+                            <td><strong>倉庫券</strong></td>
+                            <td>倉庫を利用できるチケット</td>
+                            <td>1枚</td>
+                            <td>1枚</td>
+                            <td>上限なし</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SR以上確定ガチャチケット</strong></td>
+                            <td>SR以上確定チケットガチャを引くために必要</td>
+                            <td>1枚</td>
+                            <td>20枚</td>
+                            <td>3回</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UR以上確定ガチャチケット</strong></td>
+                            <td>UR以上確定チケットガチャを引くために必要</td>
+                            <td>1枚</td>
+                            <td>200枚</td>
+                            <td>3回</td>
+                        </tr>
+                        <tr>
+                            <td><strong>祝福 カスタムカード強化の印・祝福(小) R</strong></td>
+                            <td>カスタムカードの合成素材として使うとEXP+1000。進化不可。</td>
+                            <td>-</td>
+                            <td>3枚</td>
+                            <td>10回</td>
+                        </tr>
+                        <tr>
+                            <td><strong>リサイクル券</strong></td>
+                            <td>カードのリサイクルを行うのに必要なチケット。</td>
+                            <td>1枚</td>
+                            <td>3枚</td>
+                            <td>20回</td>
+                        </tr>
+                        <tr>
+                            <td><strong>水 リサイクル補助カード・シークレット Sec</strong></td>
+                            <td>同じレアリティのリサイクルの素材カードとして利用できる。</td>
+                            <td>-</td>
+                            <td>25枚</td>
+                            <td>2回</td>
+                        </tr>
+                        <tr>
+                            <td><strong>水 リサイクル補助カード・レジェンド LE</strong></td>
+                            <td>同じレアリティのリサイクルの素材カードとして利用できる。</td>
+                            <td>-</td>
+                            <td>5枚</td>
+                            <td>2回</td>
+                        </tr>
+                        <tr>
+                            <td><strong>水 リサイクル補助カード・UR UR</strong></td>
+                            <td>同じレアリティのリサイクルの素材カードとして利用できる。</td>
+                            <td>-</td>
+                            <td>2枚</td>
+                            <td>2回</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="header-inner">
+            <p>&copy; 2025 帝国戦記 攻略サイト</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>進化 - 帝国戦記 攻略サイト</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .evo-section {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .evo-section:last-child {
+            border-bottom: none;
+        }
+
+        /* Table styles for this page */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f8ff;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        /* Tip box style */
+        .tip-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+
+        .tip-box h4 {
+            margin-top: 0;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <iframe src="header.html" title="Header"></iframe>
+    </header>
+
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <iframe src="sidebar.html" title="Sidebar"></iframe>
+        </aside>
+
+        <main class="main-content-column">
+            <div class="content-page">
+                <h2>進化について</h2>
+                <p>進化とは、特定のカード同士を組み合わせることで、より強力なカードに変化させるシステムです。</p>
+
+                <div class="evo-section">
+                    <h3>【バトルカード】の進化</h3>
+                    <p>戦争やバトルで使用する「バトルカード」は、進化によってステータス上限が大幅に上昇します。</p>
+                    <ul>
+                        <li><strong>レベル初期化:</strong> 進化するとカードレベルは1に戻ります。</li>
+                        <li><strong>ステータス継承:</strong>
+                            進化させたカードと素材にしたカードのATK・DEFを<strong>5%～10%継承</strong>し、ボーナス値として付与されます。
+                            <ul>
+                                <li><strong>Lv.MAXで進化:</strong> 10%継承</li>
+                                <li><strong>それ以外:</strong> 5%継承</li>
+                            </ul>
+                        </li>
+                        <li><strong>ボーナスの発揮:</strong> 継承したボーナス値は、進化後のカードをレベルMAXにした時にすべて発揮される計算となっています。</li>
+                    </ul>
+
+                    <h4>MM進化 (Max-Max進化)</h4>
+                    <p>最もステータスが高くなる進化方法です。</p>
+                    <ul>
+                        <li><strong>条件</strong>: 進化させる「ベースカード」と「素材カード」の両方を<strong>Lv.MAX</strong>にしてから進化させます。</li>
+                        <li><strong>効果</strong>: 両方のカードから能力値を最大限(10%)引き継ぐことができます。これを最終段階まで全ての過程で行うことで、最強のステータスになります。
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="evo-section">
+                    <h3>【幸運カード】の進化</h3>
+                    <p>このゲームの幸運カードは、ベースカードのレアリティと、プレイヤーが選択する進化コストに応じて最大ランクが変動します。</p>
+
+                    <h4>1. カードの基本構成</h4>
+                    <p>幸運カードには2つの系統が存在し、それぞれ到達可能な最大ランクが決まっています。進化の過程では、<strong>+</strong>, <strong>++</strong>,
+                        <strong>+3</strong>, <strong>+4</strong> の段階的な強化が存在し、最終的に高ランクカード2枚を合成することで最高ランクに到達します。</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ベースタイプ</th>
+                                <th>入手経路の例</th>
+                                <th>最大進化ランク</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Rベース</strong></td>
+                                <td>ガチャなど</td>
+                                <td><strong>Sec</strong> (シークレット)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SRベース</strong></td>
+                                <td>イベント報酬、演習メダル</td>
+                                <td><strong>S-Sec</strong> (スーパーシークレット)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>2. 進化パターンとコスト戦略</h4>
+                    <p>Rベース、SRベースのどちらも、一般的に以下の3つの進化パターンが採用されます。総枚数が多いほど、無課金プレイヤーにとってはハードルが高く、時間や資源の投下が必要となります。</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>進化パターン</th>
+                                <th>総枚数</th>
+                                <th>主な位置づけ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>21進化</strong></td>
+                                <td><strong>21枚</strong></td>
+                                <td>最も手軽なルート。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>40進化</strong></td>
+                                <td><strong>40枚</strong></td>
+                                <td>ハードルが高いルート。一般的な進化としてはコストが高い部類に入る。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>62進化</strong></td>
+                                <td><strong>62枚</strong></td>
+                                <td>トッププレイヤー向けの最高コストルート。極めて多くの時間と資源が必要。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="tip-box">
+                        <h4>💡 注意: プラットフォームによる違い</h4>
+                        <p><strong>トレードが実装されているプラットフォームでは入手難易度に差があるため、標準的な進化方法には差があります。</strong></p>
+                    </div>
+
+                </div>
+
+                <div class="evo-section">
+                    <h3>【装備・祝福カード】の進化</h3>
+                    <p>装備カード祝福カードは、同じカードを複数枚集めて進化させるます。</p>
+
+                    <h4>4進 (4枚進化)</h4>
+                    <p>すべて未進化のカードを4枚使用して、最終段階まで進化させる方法です。</p>
+
+                    <h4>6進 (6枚進化)</h4>
+                    <p>①未進化のカードを3枚を使用して進化させた3進カードを2枚作成。</p>
+                    <p>②その3進同士で進化を行う。</p>
+
+                    <h4>8進 (8枚進化)</h4>
+                    <p>①未進化のカードを2枚を使用して進化させた2進カードを4枚作成。</p>
+                    <p>②2進カード同士で進化させ、4進を2枚作成。</p>
+                    <p>③その4進同士で進化を行う。</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="header-inner">
+            <p>&copy; 2025 帝国戦記 攻略サイト</p>
+        </div>
+    </footer>
+</body>
+
+</html>

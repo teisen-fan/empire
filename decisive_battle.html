@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>決戦 - 帝国戦記 攻略サイト</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Local styles for data tables in this specific page */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f8ff;
+            /* Matches site theme */
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #ffffff;
+        }
+
+        /* General table header width for key-value tables */
+        table:not(.score-table):not(.prize-table) th {
+            width: 30%;
+        }
+
+        /* Specific styles for Score and Prize tables */
+        .score-table,
+        .prize-table {
+            max-width: 700px;
+            /* Limit maximum width */
+            width: 100%;
+        }
+
+        .score-table th,
+        .score-table td {
+            width: 25%;
+            /* Equal width for 4 columns */
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .score-table td {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .prize-table th {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .prize-table td {
+            text-align: center;
+        }
+
+        /* Alternate row colors for score/prize tables for better readability */
+        .score-table tr:nth-child(even) td,
+        .prize-table tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+
+        .note {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            color: #856404;
+        }
+
+        .prize-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <iframe src="header.html" title="Header"></iframe>
+    </header>
+
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <iframe src="sidebar.html" title="Sidebar"></iframe>
+        </aside>
+
+        <main class="main-content-column">
+            <div class="content-page">
+                <h2>決戦</h2>
+
+                <h3>1. 概要と基本ルール</h3>
+                <table>
+                    <tr>
+                        <th>形式</th>
+                        <td>1回戦ごとにクラス分けとマッチングを行い、<strong>3回の戦争を連続して行う</strong>特別モードの戦争。</td>
+                    </tr>
+                    <tr>
+                        <th>ルール</th>
+                        <td>戦争時のルールは<strong>通常時と同じ</strong>。ただし、特効効果と報酬が変更される。</td>
+                    </tr>
+                    <tr>
+                        <th>報酬発生</th>
+                        <td>3回戦終了後、獲得スコアによって報酬が受け取れる。<strong>1戦毎には発生しない</strong>。</td>
+                    </tr>
+                    <tr>
+                        <th>戦争マップ</th>
+                        <td>1・2回戦は<strong>5カ国マップ</strong>、3回戦は<strong>6カ国マップ</strong>で争われる。</td>
+                    </tr>
+                </table>
+
+                <h3>2. クラス分け・マッチング</h3>
+                <table>
+                    <tr>
+                        <th>基本</th>
+                        <td>各回戦で参加国家を各クラスに振り分け、その中でマッチングを行う。</td>
+                    </tr>
+                    <tr>
+                        <th>1回戦 Aクラス条件</th>
+                        <td><strong>国威ランクA以上</strong> or 「1回戦Aクラスで参加」でエントリー（要別途条件）。</td>
+                    </tr>
+                    <tr>
+                        <th>2回戦 Aクラス条件</th>
+                        <td>スコア35ポイント以上。</td>
+                    </tr>
+                    <tr>
+                        <th>3回戦 Aクラス条件</th>
+                        <td>スコア80ポイント以上 or 前回1位。</td>
+                    </tr>
+                    <tr>
+                        <th>3回戦 Sクラス条件</th>
+                        <td>スコア140ポイント以上。</td>
+                    </tr>
+                    <tr>
+                        <th>1回戦Aクラスで参加でエントリー</th>
+                        <td>(1)エントリー時の国威ランクがA以上、または(2)エントリーの一つ前に参加した戦争での国威ランクがA以上のいずれかを満たす必要がある。</td>
+                    </tr>
+                    <tr>
+                        <th>途中参加</th>
+                        <td>2回戦以降も途中参加可能。スコア0から開始されるため、最初はBクラスでの参加となる。</td>
+                    </tr>
+                    <tr>
+                        <th>エントリー期限</th>
+                        <td>各回戦が始まる前日の13時まで。</td>
+                    </tr>
+                </table>
+
+                <h3>3. 報酬とスコア</h3>
+                <table>
+                    <tr>
+                        <th>スコア付与</th>
+                        <td>1戦毎にクラスと順位による該当スコアが配られる。</td>
+                    </tr>
+                    <tr>
+                        <th>3回戦ボーナス</th>
+                        <td>3回戦目は獲得できるスコアが<strong>1.5倍</strong>になる（端数切捨）。</td>
+                    </tr>
+                </table>
+
+                <h4>スコア表（1回戦・2回戦の基本スコア）</h4>
+                <table class="score-table">
+                    <thead>
+                        <tr>
+                            <th>順位</th>
+                            <th>Sクラス</th>
+                            <th>Aクラス</th>
+                            <th>Bクラス</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1位</td>
+                            <td>160</td>
+                            <td>90</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>2位</td>
+                            <td>120</td>
+                            <td>62</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>3位</td>
+                            <td>100</td>
+                            <td>46</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>4位</td>
+                            <td>90</td>
+                            <td>34</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>5位</td>
+                            <td>80</td>
+                            <td>26</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>6位</td>
+                            <td>70</td>
+                            <td>20</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>4. 景品</h3>
+
+                <div class="prize-item">
+                    <strong>武器コイン</strong>
+                    <p><strong>基本付与枚数：</strong> スコア × 10枚</p>
+                    <p><strong>注意点：</strong> 以下の「スコア達成報酬」を1つ以上入手している場合、付与枚数は スコア × 5枚 に減少する。</p>
+                </div>
+
+                <h4>スコア達成報酬</h4>
+                <table class="prize-table">
+                    <thead>
+                        <tr>
+                            <th>スコア</th>
+                            <th>報酬</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>360以上</td>
+                            <td>イベント武器 1枚</td>
+                        </tr>
+                        <tr>
+                            <td>280以上</td>
+                            <td>イベント武器 1枚</td>
+                        </tr>
+                        <tr>
+                            <td>235以上</td>
+                            <td>イベント武器 1枚</td>
+                        </tr>
+                        <tr>
+                            <td>190以上</td>
+                            <td>イベント武器 1枚</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>景品に関する注意事項</strong>
+                    <ul>
+                        <li>戦争イベント期間内に<strong>ログインしていない（ログインボーナスを受け取っていない）ユーザーは景品を受け取れません</strong>。</li>
+                        <li>報酬は全戦終了後（3回戦終了後）にまとめて配られます。</li>
+                    </ul>
+                </div>
+
+                <h3>5. 特効効果</h3>
+                <table>
+                    <tr>
+                        <th>発生条件</th>
+                        <td>特効カードを<strong>所持している</strong>と特別効果が発生する。倉庫やプレゼントにあるカードは対象外。</td>
+                    </tr>
+                    <tr>
+                        <th>特別効果（共通）</th>
+                        <td>局地戦において、攻撃時に<strong>士気の増加スピードがアップ</strong>する。</td>
+                    </tr>
+                    <tr>
+                        <th>特別効果（役職別）</th>
+                        <td>
+                            <ul>
+                                <li><strong>奇襲兵</strong>：局地戦において士気の減少量がダウンする。</li>
+                                <li><strong>呪術兵</strong>：減少させる士気の量がアップする。</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>士気の効果</th>
+                        <td>士気はダメージをアップさせるため、戦いが有利になる。</td>
+                    </tr>
+                </table>
+
+                <h3>6. 国家管理の制限</h3>
+                <table>
+                    <tr>
+                        <th>イベント期間中</th>
+                        <td>国家合併や国民の除名/脱退が不可。ただし、<strong>加入・役職変更は可能</strong>。</td>
+                    </tr>
+                    <tr>
+                        <th>戦争中</th>
+                        <td>国家合併や国民の除名/脱退に加え、<strong>加入・役職変更も不可</strong>となる。</td>
+                    </tr>
+                    <tr>
+                        <th>制限期間</th>
+                        <td>制限モードに切り替わるのは<strong>1回戦マッチング発表後</strong>から、<strong>イベント期間終了</strong>まで。</td>
+                    </tr>
+                </table>
+
+                <div class="note">
+                    ※開催回ごとに報酬の内容や条件が少しずつ違っているので、<strong>都度確認願います</strong>。
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="header-inner">
+            <p>&copy; 2025 帝国戦記 攻略サイト</p>
+        </div>
+    </footer>
+</body>
+
+</html>
