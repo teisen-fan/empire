@@ -25,6 +25,8 @@ body {
     line-height: 1.6;
     background-image: linear-gradient(to bottom, #e6f7ff, #fff0f5);
     min-height: 100vh;
+    min-width: 320px;
+    /* Prevent layout from becoming too narrow */
 }
 
 /* Iframe Styles */
@@ -301,9 +303,19 @@ footer a:hover {
         flex-direction: column;
     }
 
+    .main-content-column {
+        width: 100%;
+        /* Reset width to auto/100% when stacked vertically */
+    }
+
     .sidebar {
         width: 100%;
         position: static;
         max-height: none;
+    }
+
+    .content-page {
+        padding: 1rem;
+        /* Reduce padding on mobile to provide more text space */
     }
 }
