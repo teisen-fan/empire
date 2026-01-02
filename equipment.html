@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>装備 - 帝国戦記 攻略サイト</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+            white-space: nowrap;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <iframe src="header.html" title="Header"></iframe>
+    </header>
+
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <iframe src="sidebar.html" title="Sidebar"></iframe>
+        </aside>
+
+        <main class="main-content-column">
+            <div class="content-page">
+                <h2>装備システム</h2>
+                <p>このゲームの「装備システム」は、大きく分けて3つのカテゴリーで構成されています。</p>
+
+                <h3>装備システムの全体図</h3>
+                <p>バトルカードには、以下の3種類のカードを装着してステータス（ATK/DEF）を底上げできます。</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>カテゴリー</th>
+                            <th>主な特徴</th>
+                            <th>主な入手方法</th>
+                            <th>重複制限</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>① 装備カード</td>
+                            <td>基本の強化アイテム。汎用性が高い。</td>
+                            <td>イベント報酬、メダル交換、ドロップ</td>
+                            <td>なし</td>
+                        </tr>
+                        <tr>
+                            <td>② 祝福カード</td>
+                            <td>属性一致で効果3倍。 最も強力なカテゴリ。</td>
+                            <td>各種ガチャ（課金・チケット）</td>
+                            <td>不可（同名カード）</td>
+                        </tr>
+                        <tr>
+                            <td>③ 幸運カード</td>
+                            <td>ステータス＋スキル強化がメイン。</td>
+                            <td>特別ガチャ、演習報酬・メダル</td>
+                            <td>不可（同名カード）</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>各カードの詳細</h3>
+                <p>バトルカードには、以下の3種類のカードを装備してステータス（ATK/DEF）を強化できます。</p>
+
+                <h4>1. 装備カード（基本装備）</h4>
+                <p>もっとも一般的な装備品です。</p>
+                <ul>
+                    <li><strong>特徴:</strong> 基本的なATK/DEFの上昇。</li>
+                    <li><strong>制約:</strong> 一部のカードは、指定属性以外に装備すると<strong>効果が30%減少</strong>します。</li>
+                    <li><strong>入手:</strong> イベント報酬、メダル交換、低級品は戦闘ドロップでも入手可能です。</li>
+                </ul>
+
+                <h4>2. 祝福カード（属性特化・高倍率）</h4>
+                <p>属性を合わせることで真価を発揮する強力なカードです。</p>
+                <ul>
+                    <li><strong>特徴:</strong> 指定属性への装備で<strong>上昇効果が3倍</strong>になります。</li>
+                    <li><strong>制約:</strong> デッキ内に同じカードを複数入れることはできません。</li>
+                    <li><strong>入手:</strong> 課金ガチャや各種SR確定チケットなど。</li>
+                </ul>
+
+                <div class="note">
+                    <strong>【特殊：カスタムカード】</strong><br>
+                    エクストラミッションで1枚のみ入手できる特殊な祝福カードです。<br>
+                    <ul>
+                        <li><strong>属性ボーナス:</strong> <strong>3倍ボーナスはありません。</strong> その代わり、素のステータスが非常に高く設定されています。</li>
+                        <li><strong>最大値:</strong> MAX ATK / MAX DEFの最大値は「190」です。(2026年1月1日現在)</li>
+                        <li><strong>上限解放:</strong> <strong>毎年1月と7月</strong>に最大値が増加します。</li>
+                        <li><strong>育成:</strong>
+                            専用アイテム（強化の印）で上限を上げ、合成で数値を高めます。ただし、最大値に近づくほど合成時の上昇幅が小さくなるため、現状は「祝福カード（6進・8進）が揃うまでの繋ぎ」としての側面が強い設計です。
+                        </li>
+                    </ul>
+                </div>
+
+                <h4>3. 幸運カード（スキル補助）</h4>
+                <p>ステータス強化に加え、特殊な付加価値を持つカードです。</p>
+                <ul>
+                    <li><strong>特徴:</strong> ATK/DEFの上昇。</li>
+                    <li><strong>スキル効果アップ:</strong> <strong>一部の上位カードに限り、</strong>バトルの「スキルの効果をアップさせる」効果を持っています。</li>
+                    <li><strong>制約:</strong> デッキ内に同じカードを複数入れることはできません。</li>
+                    <li><strong>入手:</strong> 特別ガチャ（R）、軍事演習のゴールドクラス報酬（SR）、演習メダル交換など。</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <iframe src="footer.html" title="Footer"></iframe>
+    </footer>
+</body>
+
+</html>
