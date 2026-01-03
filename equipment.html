@@ -39,6 +39,73 @@
             border-radius: 5px;
             margin-top: 10px;
         }
+
+        /* Slideshow styles */
+        .equipment-example-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .slideshow-wrapper {
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #000;
+        }
+
+        .slide-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .click-hint-text {
+            margin-top: 5px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .calculation-note {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin-top: 0;
+            font-family: monospace;
+            line-height: 1.6;
+        }
+
+        .calculation-note h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .slideshow-wrapper {
+                max-width: 100%;
+            }
+
+            .calculation-note {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -59,14 +126,15 @@
 
                 <h3>装備システムの全体図</h3>
                 <p>バトルカードには、以下の3種類のカードを装着してステータス（ATK/DEF）を底上げできます。</p>
+                <p>装備カード、祝福カード、幸運カードは、それぞれ進化させて強化できます。（<a href="evolution.html">進化ページ参照</a>）</p>
 
                 <table>
                     <thead>
                         <tr>
                             <th>カテゴリー</th>
                             <th>主な特徴</th>
-                            <th>主な入手方法</th>
-                            <th>重複制限</th>
+                            <th>主に入手方法</th>
+                            <th>デッキ重複制限</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -80,13 +148,13 @@
                             <td>② 祝福カード</td>
                             <td>属性一致で効果3倍。 最も強力なカテゴリ。</td>
                             <td>各種ガチャ（課金・チケット）</td>
-                            <td>不可（同名カード）</td>
+                            <td>あり</td>
                         </tr>
                         <tr>
                             <td>③ 幸運カード</td>
                             <td>ステータス＋スキル強化がメイン。</td>
                             <td>特別ガチャ、演習報酬・メダル</td>
-                            <td>不可（同名カード）</td>
+                            <td>あり</td>
                         </tr>
                     </tbody>
                 </table>
@@ -106,33 +174,115 @@
                 <p>属性を合わせることで真価を発揮する強力なカードです。</p>
                 <ul>
                     <li><strong>特徴:</strong> 指定属性への装備で<strong>上昇効果が3倍</strong>になります。</li>
-                    <li><strong>制約:</strong> デッキ内に同じカードを複数入れることはできません。</li>
+                    <li><strong>デッキ重複制限:</strong> あり（デッキ内に同じカードを複数入れることはできません）。</li>
                     <li><strong>入手:</strong> 課金ガチャや各種SR確定チケットなど。</li>
                 </ul>
 
-                <div class="note">
-                    <strong>【特殊：カスタムカード】</strong><br>
-                    エクストラミッションで1枚のみ入手できる特殊な祝福カードです。<br>
-                    <ul>
-                        <li><strong>属性ボーナス:</strong> <strong>3倍ボーナスはありません。</strong> その代わり、素のステータスが非常に高く設定されています。</li>
-                        <li><strong>最大値:</strong> MAX ATK / MAX DEFの最大値は「190」です。(2026年1月1日現在)</li>
-                        <li><strong>上限解放:</strong> <strong>毎年1月と7月</strong>に最大値が増加します。</li>
-                        <li><strong>育成:</strong>
-                            専用アイテム（強化の印）で上限を上げ、合成で数値を高めます。最大値は最新の祝福カード最大強化の属性３倍換算と同程度です。ただし、数値が高くなるほど合成時の上昇幅が小さく、多くの合成素材が必要となるため、現状は「祝福カード（6進・8進）が揃うまでの繋ぎ」としての側面が強い設計です。
-                        </li>
-                    </ul>
-                </div>
+
 
                 <h4>3. 幸運カード（スキル補助）</h4>
                 <p>ステータス強化に加え、特殊な付加価値を持つカードです。</p>
                 <ul>
                     <li><strong>特徴:</strong> ATK/DEFの上昇。</li>
                     <li><strong>スキル効果アップ:</strong> <strong>一部の上位カードに限り、</strong>バトルの「スキルの効果をアップさせる」効果を持っています。</li>
-                    <li><strong>制約:</strong> デッキ内に同じカードを複数入れることはできません。</li>
+                    <li><strong>デッキ重複制限:</strong> あり（デッキ内に同じカードを複数入れることはできません）。</li>
                     <li><strong>入手:</strong> 特別ガチャ（R）、軍事演習のゴールドクラス報酬（SR）、演習メダル交換など。</li>
                 </ul>
+
+                <h3>装備例と計算式</h3>
+                <p>武器、祝福、幸運を１枚のバトルカードに装備するとATK/DEFの上昇は掛け合わせた数値となります。<br>
+                    以下のスライドショーと計算式で、実際に装備を変更した際のステータス変化を説明します。</p>
+                <p>（画像をタップすると次の手順に進みます）</p>
+
+                <div class="equipment-example-container">
+                    <div class="slideshow-wrapper">
+                        <div class="slideshow-container" onclick="nextSlide()">
+                            <img id="slideImage" src="images/equip_step_1.png" alt="装備手順スライドショー" class="slide-image">
+                        </div>
+                        <p class="click-hint-text">☝️ タップして画像を切り替え</p>
+                        <!-- Indicators -->
+                        <div id="slide-indicators"
+                            style="margin-top: 15px; display: flex; justify-content: center; gap: 10px;">
+                            <!-- Generated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="calculation-note">
+                        <h4>【計算式】</h4>
+                        <p><strong>ATK:45554のバトルカードにATK160の武器を装備</strong><br>
+                            45554 ＋ 45554 × 160% ＝ 118440.4</p>
+                        <p><strong>続けてATK:112の幸運カードを装備</strong><br>
+                            118440.4 ＋ 118,440.4 × 112% ＝ 251093.648</p>
+                        <p><strong>続けてATK:61(属性3倍で183)の祝福カードを装備</strong><br>
+                            251093.648 ＋ 251093.648 × 183%(61%の3倍) ＝ 710,595.02384</p>
+                    </div>
+                </div>
             </div>
-        </main>
+
+            <script>
+                const images = [
+                    "images/equip_step_1.png",
+                    "images/equip_step_2.png",
+                    "images/equip_step_3.png",
+                    "images/equip_step_4.png",
+                    "images/equip_step_5.png",
+                    "images/equip_step_6.png",
+                    "images/equip_step_7.png",
+                    "images/equip_step_8.png",
+                    "images/equip_step_9.png"
+                ];
+                let currentIndex = 0;
+
+                function initIndicators() {
+                    const indicatorContainer = document.getElementById('slide-indicators');
+                    indicatorContainer.innerHTML = '';
+                    images.forEach((_, index) => {
+                        const dot = document.createElement('div');
+                        dot.style.cssText = `
+                            width: 12px; 
+                            height: 12px; 
+                            background-color: ${index === 0 ? 'var(--secondary-color)' : '#ccc'}; 
+                            border-radius: 50%; 
+                            cursor: pointer; 
+                            transition: all 0.3s ease; 
+                            border: 1px solid #999;
+                        `;
+                        dot.onclick = () => jumpToSlide(index);
+                        indicatorContainer.appendChild(dot);
+                    });
+                }
+
+                function updateIndicators() {
+                    const indicatorContainer = document.getElementById('slide-indicators');
+                    const dots = indicatorContainer.children;
+                    for (let i = 0; i < dots.length; i++) {
+                        const isActive = i === currentIndex;
+                        dots[i].style.backgroundColor = isActive ? 'var(--secondary-color)' : '#ccc';
+                        dots[i].style.transform = isActive ? 'scale(1.2)' : 'scale(1)';
+                    }
+                }
+
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateSlide();
+                }
+
+                function jumpToSlide(index) {
+                    currentIndex = index;
+                    updateSlide();
+                }
+
+                function updateSlide() {
+                    document.getElementById('slideImage').src = images[currentIndex];
+                    updateIndicators();
+                }
+
+                // Initialize
+                initIndicators();
+            </script>
+
+    </div>
+    </main>
     </div>
 
     <footer>
