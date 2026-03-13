@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org">
+  <!-- トップページ -->
+  <url>
+    <loc>https://teisen-fan.github.io/empire/</loc>
+    <priority>1.0</priority>
+  </url>
+  <!-- 個別ページ -->
+  <url>
+    <loc>https://teisen-fan.github.io/empire/index.html</loc>
+    <priority>1.0</priority>
+    <loc>https://teisen-fan.github.io/empire/about.html</loc>
+    <priority>0.8</priority>
+    <loc>https://teisen-fan.github.io/empire/march.html</loc>
+    <priority>0.8</priority>
+    <loc>https://teisen-fan.github.io/empire/chariot.html</loc>
+    <priority>0.8</priority>
+    <loc>https://teisen-fan.github.io/empire/military_exercise.html</loc>
+    <priority>0.8</priority>
+    <loc>https://teisen-fan.github.io/empire/suppression.html</loc>
+    <priority>0.8</priority>
+    <loc>https://teisen-fan.github.io/empire/decisive_battle.html</loc>
+    <priority>0.8</priority>
+    <loc>https://teisen-fan.github.io/empire/boot_camp.html</loc>
+    <priority>0.8</priority>
+    <loc>https://teisen-fan.github.io/empire/database.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
